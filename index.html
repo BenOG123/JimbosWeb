@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games Grid Layout</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #1a1a1a;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        .scroll-header {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            text-align: center;
+            border-radius: 30px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        .search-container {
+            display: flex;
+            gap: 10px;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+
+        .search-bar {
+            flex-grow: 1;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .search-bar input {
+            background: none;
+            border: none;
+            color: white;
+            width: 100%;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .filter-button {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 15px 25px;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .game-card {
+            position: relative;
+            aspect-ratio: 1;
+            border-radius: 20px;
+            overflow: hidden;
+            background-color: rgba(255, 255, 255, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .game-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .game-title {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            right: 15px;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 8px 15px;
+            border-radius: 10px;
+            font-size: 14px;
+            backdrop-filter: blur(5px);
+        }
+    </style>
+</head>
+<body>
+    <div class="scroll-header">
+        Scroll To Latest Games
+    </div>
+
+    <div class="search-container">
+        <div class="search-bar">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" placeholder="Search">
+        </div>
+        <div class="filter-button">
+            No Filter
+        </div>
+    </div>
+
+    <div class="games-grid">
+        <div class="game-card">
+            <img src="/api/placeholder/400/400" alt="Infinite Tower" class="game-image">
+            <div class="game-title">Infinite Tower</div>
+        </div>
+        <div class="game-card">
+            <img src="/api/placeholder/400/400" alt="Tunnel Rush" class="game-image">
+            <div class="game-title">Tunnel Rush</div>
+        </div>
+        <div class="game-card">
+            <img src="/api/placeholder/400/400" alt="Space War" class="game-image">
+            <div class="game-title">Space War</div>
+        </div>
+        <div class="game-card">
+            <img src="/api/placeholder/400/400" alt="Slope" class="game-image">
+            <div class="game-title">Slope</div>
+        </div>
+        <div class="game-card">
+            <img src="/api/placeholder/400/400" alt="Asteroids Belt" class="game-image">
+            <div class="game-title">Asteroids Belt</div>
+        </div>
+        <div class="game-card">
+            <img src="/api/placeholder/400/400" alt="Backrooms" class="game-image">
+            <div class="game-title">Backrooms</div>
+        </div>
+        <div class="game-card">
+            <img src="/api/placeholder/400/400" alt="Slide In The Woods" class="game-image">
+            <div class="game-title">Slide In The Woods</div>
+        </div>
+        <div class="game-card">
+            <img src="/api/placeholder/400/400" alt="Survivor Mode" class="game-image">
+            <div class="game-title">Survivor Mode</div>
+        </div>
+        <div class="game-card">
+            <img src="/api/placeholder/400/400" alt="Stack" class="game-image">
+            <div class="game-title">Stack</div>
+        </div>
+    </div>
+</body>
+</html>
